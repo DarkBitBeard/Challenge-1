@@ -8,30 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Horiseon: Digital Marketing Solutions</title>
     <link rel="stylesheet" href="./assets/css/style.css">
-    <style>
-        /* Regular Styles */
-        body {
-            color: #333;
-            background-color: #fff;
-            transition: color 0.3s, background-color 0.3s;
-        }
-
-        /* High Contrast Styles */
-        body.high-contrast {
-            color: #fff;
-            background-color: #000;
-        }
-    </style>
 </head>
 
 <body>
-    <!-- Contrast Toggle Button -->
-    <button onclick="toggleContrast()">Toggle Contrast</button>
-
-    <!-- Font Size Buttons -->
-    <button onclick="adjustFontSize(1)">Increase Font Size</button>
-    <button onclick="adjustFontSize(-1)">Decrease Font Size</button>
-
     <!-- Header Section -->
     <header class="header">
         <h1>Hori<span class="seo">seo</span>n</h1>
@@ -115,31 +94,7 @@
         <h2>Made with ❤️️ by Horiseon</h2>
         <p>&copy; 2023 Horiseon Social Solution Services, Inc.</p>
     </footer>
-
-    <script>
-        function toggleContrast() {
-            document.body.classList.toggle('high-contrast');
-        }
-
-        let currentFontSize = 16; // Initial font size in pixels
-
-        function adjustFontSize(change) {
-            currentFontSize += change;
-
-            // Get all text elements on the page (headings, paragraphs, spans, etc.)
-            const textElements = document.querySelectorAll('body *');
-
-            // Adjust the font size for each text element
-            textElements.forEach(element => {
-                const currentStyle = window.getComputedStyle(element, null).getPropertyValue('font-size');
-                const currentSize = parseFloat(currentStyle);
-                const newSize = currentSize + change;
-
-                element.style.fontSize = `${newSize}px`;
-            });
-        }
-    </script>
-
+    
 </body>
 
 </html>
